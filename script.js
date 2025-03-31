@@ -39,41 +39,40 @@ let progressjs = setInterval(() => {
     clearInterval(progressjs);
   }
 }, jsspeed);
+// Java progress circular bar // Java progress circular bar 
+let javaProgress = document.querySelector(".java"),
+javaValue = document.querySelector(".java-progress");
 
-// php progress circular bar 
-let phpProgress = document.querySelector(".php"),
-  phpValue = document.querySelector(".php-progress");
+let javaStartValue = 0,
+javaEndValue = 90,
+javaSpeed = 30;
 
-let phpStartValue = 0,
-  phpEndValue = 80,
-  phpspeed = 30;
+let progressJava = setInterval(() => {
+javaStartValue++;
 
-let progressphp = setInterval(() => {
-  phpStartValue++;
-
-  phpValue.textContent = `${phpStartValue}%`;
-  phpProgress.style.background = `conic-gradient(#20c997 ${
-    phpStartValue * 3.6
+javaValue.textContent = `${javaStartValue}%`;
+javaProgress.style.background =`conic-gradient(#3f396d ${
+    javaStartValue * 3.6
   }deg, #ededed 0deg)`;
 
-  if (phpStartValue == phpEndValue) {
-    clearInterval(progressphp);
-  }
-}, phpspeed);
+if (javaStartValue == javaEndValue) {
+  clearInterval(progressJava);
+}
+}, javaSpeed);
 
 // reactjs progress circular bar 
 let reactProgress = document.querySelector(".reactjs"),
   reactValue = document.querySelector(".reactjs-progress");
 
 let reactStartValue = 0,
-  reactEndValue = 90,
+  reactEndValue = 80,
   rjsspeed = 30;
 
 let progressreact = setInterval(() => {
   reactStartValue++;
 
   reactValue.textContent = `${reactStartValue}%`;
-  reactProgress.style.background = `conic-gradient(#3f396d ${
+  reactProgress.style.background = `conic-gradient(#fca61f ${
     reactStartValue * 3.6
   }deg, #ededed 0deg)`;
 
@@ -81,6 +80,52 @@ let progressreact = setInterval(() => {
     clearInterval(progressreact);
   }
 }, rjsspeed);
+
+//spring
+let springBootProgress = document.querySelector(".springboot"),
+  springBootValue = document.querySelector(".springboot-progress");
+
+let springBootStartValue = 0,
+  springBootEndValue = 90, // Adjust the percentage as needed
+  springBootSpeed = 30;
+
+let progressSpringBoot = setInterval(() => {
+  springBootStartValue++;
+
+  springBootValue.textContent = `${springBootStartValue}%`;
+  springBootProgress.style.background =  `conic-gradient(#00758F ${
+    springBootStartValue * 3.6
+  }deg, #ededed 0deg)`;
+
+  if (springBootStartValue == springBootEndValue) {
+    clearInterval(progressSpringBoot);
+  }
+}, springBootSpeed);
+
+
+// MySQL progress circular bar 
+let mysqlProgress = document.querySelector(".mysql"),
+  mysqlValue = document.querySelector(".mysql-progress");
+
+let mysqlStartValue = 0,
+  mysqlEndValue = 90, // Adjust the percentage as needed
+  mysqlSpeed = 30;
+
+let progressMySQL = setInterval(() => {
+  mysqlStartValue++;
+
+  mysqlValue.textContent = `${mysqlStartValue}%`;
+  mysqlProgress.style.background =  `conic-gradient(#7d2ae8 ${
+    mysqlStartValue * 3.6
+  }deg, #ededed 0deg)`;
+
+  if (mysqlStartValue == mysqlEndValue) {
+    clearInterval(progressMySQL);
+  }
+}, mysqlSpeed);
+
+
+
 
 
 // filter using javascript
@@ -100,22 +145,6 @@ $(document).ready(function () {
   });
 });
 
-
-// javascript for sticky navbar even if u scroll the navbar will be fixed
-// document.addEventListener("DOMContentLoaded", function(){
-//   window.addEventListener('scroll', function() {
-//       if (window.scrollY > 50) {
-//         document.getElementById('navbar-top').classList.add('fixed-top');
-//         // add padding top to show content behind navbar
-//         navbar_height = document.querySelector('.navbar').offsetHeight;
-//         document.body.style.paddingTop = navbar_height + 'px';
-//       } else {
-//         document.getElementById('navbar-top').classList.remove('fixed-top');
-//          // remove padding top from body
-//         document.body.style.paddingTop = '0';
-//       } 
-//   });
-// }); 
 
 
 // adding funtionality to back to top button 
